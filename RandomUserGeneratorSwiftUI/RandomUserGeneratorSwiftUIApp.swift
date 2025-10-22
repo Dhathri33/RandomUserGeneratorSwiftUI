@@ -11,7 +11,7 @@ import SwiftUI
 struct RandomUserGeneratorSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(userViewModel: UserViewModel(shared: NetworkManager.shared))
         }
     }
 }
