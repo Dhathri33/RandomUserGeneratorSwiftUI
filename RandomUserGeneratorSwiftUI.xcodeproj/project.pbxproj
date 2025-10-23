@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3A7C66AC2EAACFD400651ED5 /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 3A7C66AB2EAACFD400651ED5 /* ActivityIndicatorView */; };
+		3A7C66AF2EAAD3C600651ED5 /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = 3A7C66AE2EAAD3C600651ED5 /* Shimmer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A7C66AF2EAAD3C600651ED5 /* Shimmer in Frameworks */,
 				3A7C66AC2EAACFD400651ED5 /* ActivityIndicatorView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +73,7 @@
 			name = RandomUserGeneratorSwiftUI;
 			packageProductDependencies = (
 				3A7C66AB2EAACFD400651ED5 /* ActivityIndicatorView */,
+				3A7C66AE2EAAD3C600651ED5 /* Shimmer */,
 			);
 			productName = RandomUserGeneratorSwiftUI;
 			productReference = 3A7C66222EA9384100651ED5 /* RandomUserGeneratorSwiftUI.app */;
@@ -102,6 +105,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				3A7C66AA2EAACFD400651ED5 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */,
+				3A7C66AD2EAAD3C600651ED5 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3A7C66232EA9384100651ED5 /* Products */;
@@ -343,6 +347,14 @@
 				minimumVersion = 1.2.1;
 			};
 		};
+		3A7C66AD2EAAD3C600651ED5 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/markiv/SwiftUI-Shimmer";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -350,6 +362,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3A7C66AA2EAACFD400651ED5 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */;
 			productName = ActivityIndicatorView;
+		};
+		3A7C66AE2EAAD3C600651ED5 /* Shimmer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A7C66AD2EAAD3C600651ED5 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */;
+			productName = Shimmer;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

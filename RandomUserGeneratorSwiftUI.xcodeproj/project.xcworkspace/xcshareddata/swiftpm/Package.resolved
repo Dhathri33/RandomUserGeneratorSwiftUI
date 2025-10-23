@@ -1,5 +1,5 @@
 {
-  "originHash" : "79cd1985710d381b122ae4431ef6e9f5de47a48df2e67434d87673126b017a12",
+  "originHash" : "cffc1892ca97c42bed6aa3fb3976209f6a1f97d850eee8515ccec82f25480507",
   "pins" : [
     {
       "identity" : "activityindicatorview",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "36140867802ae4a1d2b11490bcbbefe058001d14",
         "version" : "1.2.1"
+      }
+    },
+    {
+      "identity" : "swiftui-shimmer",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/markiv/SwiftUI-Shimmer",
+      "state" : {
+        "revision" : "0226e21f9bf355d40e07e5f5e1c33679d50e167f",
+        "version" : "1.5.1"
       }
     }
   ],
