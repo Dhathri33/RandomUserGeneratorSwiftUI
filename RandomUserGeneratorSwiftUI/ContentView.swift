@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import ActivityIndicatorView
 
 struct ContentView: View {
     @ObservedObject var userViewModel: UserViewModel
+    @State var isLoading = true
     init(userViewModel: UserViewModel){
         self.userViewModel = userViewModel
     }
@@ -21,7 +23,9 @@ struct ContentView: View {
             .background(.cyan)
             .foregroundStyle(.white)
             .padding()
-
+        ActivityIndicatorView(isVisible: $isLoading, type: .scalingDots())
+            .frame(width: 50, height: 50)
+            .foregroundStyle(.blue)
         List(userViewModel.user, id: \.self) { user in
             VStack(alignment:.leading, spacing: 20) {
                 ImageView(userViewModel: userViewModel, user: user)
@@ -37,7 +41,7 @@ struct ContentView: View {
                 Text("Phone Number: \(user.phone ?? "")")
             }
         }
-        ButtonView(userViewModel: userViewModel)
+        ButtonView(userViewModel: userViewModel, isLoading: $isLoading)
     }
 }
 
@@ -71,10 +75,12 @@ struct ImageView: View{
 
 struct ButtonView: View{
     @ObservedObject var userViewModel: UserViewModel
+    @Binding var isLoading: Bool
     var body: some View {
         Button {
             Task {
                 await userViewModel.getData()
+                isLoading = false
             }
         } label: {
             Text("Generate Random User Data")
