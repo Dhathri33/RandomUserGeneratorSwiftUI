@@ -8,6 +8,7 @@
 import SwiftUI
 import ActivityIndicatorView
 import Shimmer
+import Charts
 
 struct ContentView: View {
     @ObservedObject var userViewModel: UserViewModel
@@ -33,6 +34,7 @@ struct ContentView: View {
                     .frame(width: 50, height: 50)
                     .foregroundStyle(.blue)
             } else {
+                ChartSection(users: userViewModel.user)
                 List(userViewModel.user, id: \.self) { user in
                     VStack(alignment: .leading, spacing: 20) {
                         ImageView(userViewModel: userViewModel, user: user)
@@ -48,7 +50,6 @@ struct ContentView: View {
                     }
                 }
             }
-
             ButtonView(userViewModel: userViewModel, isLoading: $isLoading)
         }
     }
@@ -110,6 +111,31 @@ struct ButtonView: View{
         }
     }
 }
+
+struct ChartSection: View {
+    let users: [User]
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            VStack(alignment: .leading) {
+                Text("Gender Distribution").font(.headline)
+                Chart(users.genderCounts()) { item in
+                    BarMark(
+                        x: .value("Gender", item.gender),
+                        y: .value("Count", item.count)
+                    )
+                    .annotation(position: .top) {
+                        Text("\(item.count)").font(.caption).bold()
+                    }
+                }
+                .frame(height: 180)
+                .padding(.horizontal)
+            }
+        }
+        .padding(.bottom, 8)
+    }
+}
+
 #Preview {
     ContentView(userViewModel: UserViewModel(shared: NetworkManager.shared))
 }

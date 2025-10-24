@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3A7C66AC2EAACFD400651ED5 /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 3A7C66AB2EAACFD400651ED5 /* ActivityIndicatorView */; };
 		3A7C66AF2EAAD3C600651ED5 /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = 3A7C66AE2EAAD3C600651ED5 /* Shimmer */; };
+		3A7C66D12EABC50A00651ED5 /* SundialKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3A7C66D02EABC50A00651ED5 /* SundialKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A7C66D12EABC50A00651ED5 /* SundialKit in Frameworks */,
 				3A7C66AF2EAAD3C600651ED5 /* Shimmer in Frameworks */,
 				3A7C66AC2EAACFD400651ED5 /* ActivityIndicatorView in Frameworks */,
 			);
@@ -74,6 +76,7 @@
 			packageProductDependencies = (
 				3A7C66AB2EAACFD400651ED5 /* ActivityIndicatorView */,
 				3A7C66AE2EAAD3C600651ED5 /* Shimmer */,
+				3A7C66D02EABC50A00651ED5 /* SundialKit */,
 			);
 			productName = RandomUserGeneratorSwiftUI;
 			productReference = 3A7C66222EA9384100651ED5 /* RandomUserGeneratorSwiftUI.app */;
@@ -106,6 +109,7 @@
 			packageReferences = (
 				3A7C66AA2EAACFD400651ED5 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */,
 				3A7C66AD2EAAD3C600651ED5 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */,
+				3A7C66CF2EABC50A00651ED5 /* XCRemoteSwiftPackageReference "SundialKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3A7C66232EA9384100651ED5 /* Products */;
@@ -355,6 +359,14 @@
 				minimumVersion = 1.5.1;
 			};
 		};
+		3A7C66CF2EABC50A00651ED5 /* XCRemoteSwiftPackageReference "SundialKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/brightdigit/SundialKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -367,6 +379,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3A7C66AD2EAAD3C600651ED5 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */;
 			productName = Shimmer;
+		};
+		3A7C66D02EABC50A00651ED5 /* SundialKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A7C66CF2EABC50A00651ED5 /* XCRemoteSwiftPackageReference "SundialKit" */;
+			productName = SundialKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

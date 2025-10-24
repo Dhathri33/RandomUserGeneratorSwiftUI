@@ -19,3 +19,11 @@ class UserViewModel: ObservableObject {
         user = await shared.getDataFromServer(url: Constants.endPoint)
     }
 }
+
+extension Array where Element == User {
+    func genderCounts() -> [GenderCount] {
+        Dictionary(grouping: self, by: { ($0.gender ?? "Unknown").capitalized })
+            .map { GenderCount(gender: $0.key, count: $0.value.count) }
+            .sorted { $0.gender < $1.gender }
+    }
+}

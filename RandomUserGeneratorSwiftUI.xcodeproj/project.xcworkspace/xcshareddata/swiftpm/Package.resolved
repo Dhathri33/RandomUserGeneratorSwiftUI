@@ -1,5 +1,5 @@
 {
-  "originHash" : "cffc1892ca97c42bed6aa3fb3976209f6a1f97d850eee8515ccec82f25480507",
+  "originHash" : "eb02a2ec35ea9f63b623a50595f7538c3d8d9c221b2d11b15857fa62bd005634",
   "pins" : [
     {
       "identity" : "activityindicatorview",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "36140867802ae4a1d2b11490bcbbefe058001d14",
         "version" : "1.2.1"
+      }
+    },
+    {
+      "identity" : "sundialkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/brightdigit/SundialKit.git",
+      "state" : {
+        "revision" : "58e32d9b620feb3e02d2fbf6b8569a3349d60182",
+        "version" : "0.2.1"
       }
     },
     {

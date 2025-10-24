@@ -26,3 +26,9 @@ struct name: Decodable, Hashable {
 struct userResult: Decodable {
     var results: [User]?
 }
+
+struct GenderCount: Identifiable, Hashable {
+    let gender: String
+    let count: Int
+    var id: String { gender }
+}
